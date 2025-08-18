@@ -1,6 +1,6 @@
 TODO:✅
 Podcast Summarization with docker implementation
-3 SQL Questions
+3 SQL Questions ✅
 3 Python Questions
 Volunteering Mail
 
@@ -12,7 +12,7 @@ Daily Task:
 11:00 - 12:30 - Food and time waste
 12:30 - 13:30 - Time pass
 13:30 - 15:00 - SQL and Time Pass 				  
-14:30 - 15:00 - 
+15:00 - 16:20 - Apply to jobs
 15:00 - 16:00 - 
 16:00 - 17:00 -
 17:00 - 18:00 - 

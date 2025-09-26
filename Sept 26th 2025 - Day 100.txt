@@ -2,12 +2,12 @@ Todays Priority:❌
 Deep Patel - Linkedin
 
 Daily:✅
-Read Book
-3 SQL Questions 
+Read Book✅
+3 SQL Questions ✅
 3 Python Questions
-60 Pushups
+60 Pushups ✅
 Study Trade
-HierBridge
+HierBridge ✅
 Study Tech
 
 Daily Task:
@@ -15,4 +15,13 @@ Daily Task:
 7:30 - 10:00 - Chill and Coffee and Read Book
 10:00 - 11:30 - Apply to jobs //////
 11:30 - 12:30 - Food and Chill
+12:30 - 13:00 - SQL Practice
+13:00 - 13:30 - Time Waste
+13:30 - 14:00 - SQL Practice
+14:00 - 14:30 - Trying to study Python
+14:30 - 14:40 - HierBridge Learn
+14:40 - 15:15 - Food 
+15:15 - 15:50 - HierBridge Study
+16:00 - 16:20 - Laundry
+16:20 - 18:10 - Time waste and Laundry
 

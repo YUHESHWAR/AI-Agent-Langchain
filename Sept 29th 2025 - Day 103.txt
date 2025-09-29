@@ -11,8 +11,10 @@ HierBridge
 Study Tech
 
 Daily Task:
-7:30  Day Starts
-7:30 - 10:00 -
+9:00  Day Starts
+9:00 - 10:30 - Bath adn Food
+10:30 - 11:30 - Stufy HierBridge
+11:30 - 12:30 - Hierbridge Meet
 
 
-I have made changes to this branch and i would like o merge it withthe main branch
+

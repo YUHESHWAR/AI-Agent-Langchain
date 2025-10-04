@@ -1,8 +1,0 @@
-All forumas ar ebased on the assumption that the total number of data points = n = N
-Σ = Summation from i=1 to N data points
-x̄ = Ȳ = Mean
-
-Varience = s² = σ² = Σ(xᵢ - x̄)² / (n-1)
-Standard Deviation = s = σ
-Covarience = cov(X,Y) = Σ(Xi - X̄) * (Yi - Ȳ) / (N-1)
-Pearson correlation coefficient (r) = cov(X,Y) / (σX * σY)   [-1 <= r <= 1]

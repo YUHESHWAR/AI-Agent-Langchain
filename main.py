@@ -4,6 +4,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.output_parsers import PydanticOutputParser
 from langchain.agents import create_tool_calling_agent, AgentExecutor
+from tools import search_tool, wiki_tool, save_tool
 
 # Load environment variables from a .env file
 load_dotenv()
@@ -34,24 +35,31 @@ prompt = ChatPromptTemplate.from_messages([
     ]
 ).partial(format_instructions=parser.get_format_instructions())
 
+tools =[search_tool, wiki_tool, save_tool]
+
 agent = create_tool_calling_agent(
     llm=llm,
     prompt=prompt,
-    tools=[]
+    tools=tools
 )
 
 agent_executor = AgentExecutor(
     agent=agent,
-    tools=[],
+    tools=tools,
     verbose=True
 )
 
-raw_response = agent_executor.invoke({"query": "What is the impact of climate change on global agriculture?"})
-print("--- Raw Response ---")
-print(raw_response)
+query = input("what can I help you with today? ")
 
-output_string = raw_response.get('output', '')
+raw_response = agent_executor.invoke({"query": query})
+# print("--- Raw Response ---")
+# print(raw_response)
 
-# Parse the output string into the structured response model
-structured_response = parser.parse(output_string)
-print(structured_response.topic)
+
+try:
+    output_string = raw_response.get('output', '')
+    structured_response = parser.parse(output_string)
+    print(structured_response)
+except Exception as e:
+    print("Error parsing response:", e, "\n Raw Response :", raw_response)
+    structured_response = None

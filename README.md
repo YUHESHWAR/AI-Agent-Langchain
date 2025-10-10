@@ -22,7 +22,7 @@ While there are many conversational AI projects, this one stands out for a few k
 
 ### Prerequisites
 
--   Python 3.8 or higher
+-   Python 3.10 or higher
 -   An API key for Google's Gemini Pro model
 
 ### Installation

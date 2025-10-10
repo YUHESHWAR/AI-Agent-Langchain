@@ -2,6 +2,15 @@
 
 This project is a conversational AI agent that leverages LangChain and Google's Gemini Pro model to provide structured summaries on a wide range of topics. The agent is equipped with tools to search the web, look up information on Wikipedia, and save its findings to a local file.
 
+## What Makes This Project Different?
+
+While there are many conversational AI projects, this one stands out for a few key reasons:
+
+-   **Powered by Gemini Pro:** It specifically showcases the integration of Google's powerful Gemini Pro model, providing a modern alternative to other commonly used LLMs.
+-   **Reliable, Structured Output:** By using Pydantic models for output parsing, the agent guarantees that its responses are in a predictable, structured format. This makes the output reliable and easy to use in downstream applications.
+-   **Custom Tool Integration:** The project includes a custom tool (`save_to_txt`) that demonstrates how to extend the agent's capabilities beyond standard library functions. This serves as a practical template for adding your own unique tools.
+-   **A Clear Learning Blueprint:** The codebase is intentionally kept clean and focused, making it an excellent starting point for developers who want to learn how to build tool-using agents with LangChain without unnecessary complexity.
+
 ## Features
 
 -   **Conversational Interface:** Interact with the agent through a simple command-line interface.

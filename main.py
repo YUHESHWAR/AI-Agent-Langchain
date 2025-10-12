@@ -48,18 +48,3 @@ agent_executor = AgentExecutor(
     tools=tools,
     verbose=True
 )
-
-query = input("what can I help you with today? ")
-
-raw_response = agent_executor.invoke({"query": query})
-# print("--- Raw Response ---")
-# print(raw_response)
-
-
-try:
-    output_string = raw_response.get('output', '')
-    structured_response = parser.parse(output_string)
-    print(structured_response)
-except Exception as e:
-    print("Error parsing response:", e, "\n Raw Response :", raw_response)
-    structured_response = None

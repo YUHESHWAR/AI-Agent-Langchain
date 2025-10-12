@@ -29,7 +29,12 @@ const ChatWindow = () => {
       setMessages(prevMessages => [...prevMessages, botResponse]);
     } catch (error) {
       console.error('Error fetching data:', error);
-      const errorResponse = { sender: 'bot', text: 'Sorry, something went wrong.' };
+      let errorMessage = 'Sorry, something went wrong.';
+      if (error.response) {
+        const data = await error.response.json();
+        errorMessage = data.error || errorMessage;
+      }
+      const errorResponse = { sender: 'bot', text: errorMessage };
       setMessages(prevMessages => [...prevMessages, errorResponse]);
     } finally {
       setIsLoading(false);

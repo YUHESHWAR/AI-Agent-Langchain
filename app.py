@@ -13,6 +13,9 @@ def chat():
     if not query:
         return jsonify({'error': 'Query is required'}), 400
 
+    if query.lower().strip() == 'quit':
+        return jsonify({'summary': 'Happy to be of service'})
+
     try:
         raw_response = agent_executor.invoke({"query": query})
         output_string = raw_response.get('output', '')
@@ -20,8 +23,9 @@ def chat():
         summary = structured_response.summary
         return jsonify({'summary': summary})
     except Exception as e:
-        print("Error processing request:", e)
-        return jsonify({'error': 'Failed to process the request'}), 500
+        error_message = str(e)
+        print("Error processing request:", error_message)
+        return jsonify({'error': f'An error occurred: {error_message}'}), 500
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
